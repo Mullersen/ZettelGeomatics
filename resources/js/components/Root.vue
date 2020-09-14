@@ -26,3 +26,9 @@
         },
     }
 </script>
+<style>
+.subtitle{
+    font-family: 'Rambla', sans-serif;
+    font-weight:bold;
+}
+</style>

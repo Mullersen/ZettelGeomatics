@@ -1,3 +1,12 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Rambla:wght@400;700&display=swap');
+//import initial Bulma variables
+@import "~bulma/sass/utilities/initial-variables.sass";
+@import "~bulma/sass/utilities/functions.sass";
+$family-header: 'Crimson Text',
+serif;
+$family-sans-serif:'Rambla',
+sans-serif;
+$title-family: $family-header;
+$subtitle-family: $family-header;
 @import '~bulma/bulma.sass';

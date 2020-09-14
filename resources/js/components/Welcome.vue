@@ -4,7 +4,6 @@
             <div class="container has-text-centered">
                 <h1 class="title">Zettel Geomatics</h1>
                 <button class="button">Contact</button>
-
             </div>
         </div>
     </section>
@@ -21,7 +20,7 @@ export default {
 .hero{
     min-height: 70vh;
     background-image: url("/images/bc9641_347f4a9b418d49f1bf547e1550e244dd_mv2_d_3264_1840_s_112.jpg");
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: cover;
 }
 .container{
