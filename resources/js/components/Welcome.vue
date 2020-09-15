@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title">Zettel Geomatics</h1>
+                <h1 id="title" class="title">Zettel Geomatics</h1>
                 <button class="button">Contact</button>
             </div>
         </div>
@@ -25,5 +25,8 @@ export default {
 }
 .container{
     margin-top:10vh;
+}
+#title{
+    font-size: 3rem;
 }
 </style>

@@ -3,10 +3,26 @@
 //import initial Bulma variables
 @import "~bulma/sass/utilities/initial-variables.sass";
 @import "~bulma/sass/utilities/functions.sass";
+//colors
+$grey: #9D9B95;
+$lightblue: #33A1FD;
+$darkblue: #152982;
+$black: #222222;
+$white: #FFFFFF;
 $family-header: 'Crimson Text',
 serif;
 $family-sans-serif:'Rambla',
 sans-serif;
 $title-family: $family-header;
 $subtitle-family: $family-header;
+$button-background-color: $black;
+$button-color: $white;
+$button-border-color: $black;
+$button-hover-border-color: $black;
+$button-hover-color: $grey;
+$navbar-item-hover-background-color: $white;
+$navbar-item-hover-color: $darkblue;
 @import '~bulma/bulma.sass';
+.button {
+    border-radius: 0;
+}

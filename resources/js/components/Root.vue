@@ -2,9 +2,17 @@
     <div>
         <Navigation/>
         <Welcome/>
+        <MyLine v-scrollanimation/>
         <Services/>
+        <MyLine v-scrollanimation/>
         <Contact/>
+        <MyLine v-scrollanimation/>
         <Location/>
+        <footer class="footer">
+            <div class="content">
+                <p>All rights reserved Zettel Geomatics</p>
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -14,6 +22,7 @@
     import Services from './Services';
     import Contact from './Contact';
     import Location from './Location';
+    import MyLine from './MyLine';
 
     export default {
         name: "Root",
@@ -22,7 +31,8 @@
             Welcome,
             Services,
             Contact,
-            Location
+            Location,
+            MyLine,
         },
     }
 </script>
@@ -30,5 +40,14 @@
 .subtitle{
     font-family: 'Rambla', sans-serif;
     font-weight:bold;
+}
+.before-enter{
+ opacity: 0 ;
+ transform: translateY(100px);
+ transition: all .5s .2s ease-out;
+}
+.enter{
+ opacity: 1 ;
+ transform: translateY(0px);
 }
 </style>

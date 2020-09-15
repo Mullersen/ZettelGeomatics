@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
+        <div class="navbar-start">
           <a class="navbar-item" href="#home">
             <img src="/logo/logo-cropped.jpg" />
           </a>
@@ -44,10 +44,21 @@ img {
   max-height: 10vh;
 }
 .navbar-item {
-    margin-right: 2rem; 
-    margin-left: 2rem; 
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 2px;
+}
+.navbar-item:after{
+    border-bottom: 3px solid #152982;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+}
+.navbar-item:hover:after{
+    transform: scaleX(1);
 }
 .navbar-start{
-    margin: auto !important; 
+    margin: 2px auto 2px auto !important;
 }
 </style>

@@ -4,10 +4,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-
-
 window.Vue = require('vue');
 window.axios = require('axios');
+import ScrollAnimation from './scrollanimation';
+
+Vue.directive('scrollanimation', ScrollAnimation);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
@@ -22,6 +23,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('Root', require('./components/Root.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

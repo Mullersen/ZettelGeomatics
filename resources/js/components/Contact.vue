@@ -1,12 +1,12 @@
 <template>
-  <section class="hero">
+  <section id="contact" class="hero">
     <div class="hero-body">
       <div class="section">
         <div class="container has-text-centered">
-          <h1 class="title">CONTACT</h1>
+          <h1 v-scrollanimation class="title">CONTACT</h1>
         </div>
       </div>
-      <div class="container">
+      <div v-scrollanimation class="container">
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="field is-horizontal">
