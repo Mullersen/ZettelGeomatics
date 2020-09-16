@@ -22,6 +22,7 @@ $button-hover-border-color: $black;
 $button-hover-color: $grey;
 $navbar-item-hover-background-color: $white;
 $navbar-item-hover-color: $darkblue;
+$link: $white;
 @import '~bulma/bulma.sass';
 .button {
     border-radius: 0;

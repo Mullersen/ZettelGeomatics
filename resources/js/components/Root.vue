@@ -8,7 +8,7 @@
         <Contact/>
         <MyLine v-scrollanimation/>
         <Location/>
-        <footer class="footer">
+        <footer class="footer" style="background-color:#9D9B95;">
             <div class="content">
                 <p>All rights reserved Zettel Geomatics</p>
             </div>
@@ -37,17 +37,23 @@
     }
 </script>
 <style>
+html{
+    scroll-behavior: smooth;
+}
 .subtitle{
     font-family: 'Rambla', sans-serif;
     font-weight:bold;
 }
 .before-enter{
  opacity: 0 ;
- transform: translateY(100px);
- transition: all .5s .2s ease-out;
+ transform: translateY(70px);
+ transition: all .8s .2s ease-out;
 }
 .enter{
  opacity: 1 ;
  transform: translateY(0px);
+}
+#services, #contact, #location {
+  scroll-margin-top: 100px;
 }
 </style>

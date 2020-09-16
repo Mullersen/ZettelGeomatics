@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="container">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-start">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
           <a class="navbar-item" href="#home">
             <img src="/logo/logo-cropped.jpg" />
           </a>
@@ -43,21 +43,23 @@ export default {
 img {
   max-height: 10vh;
 }
-.navbar-item {
+.navbar-start .navbar-item:link {
     margin-right: 3rem;
     margin-left: 3rem;
     margin-top: auto;
     margin-bottom: auto;
     padding: 2px;
+    border-bottom: 2px solid;
+    border-color: rgba(21, 41, 130, 0);
+    transition: border .5s ease-in-out;
 }
-.navbar-item:after{
-    border-bottom: 3px solid #152982;
-    transform: scaleX(0);
-    transition: all 0.2s ease-in-out;
+.navbar-start .navbar-item:hover{
+  border-color:rgba(21, 41, 130, 1);
 }
-.navbar-item:hover:after{
-    transform: scaleX(1);
+.navbar-start .navbar-item:active{
+  border-color:rgba(21, 41, 130, 1);
 }
+
 .navbar-start{
     margin: 2px auto 2px auto !important;
 }

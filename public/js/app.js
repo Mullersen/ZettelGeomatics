@@ -1980,6 +1980,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   Name: "Contact"
 });
@@ -1995,6 +2003,26 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2223,7 +2251,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hero[data-v-4c2584f6] {\n  min-height: 80vh;\n  background-image: url(\"/images/3070a1fdc6842e57a4eab565e87265a5.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n", ""]);
+exports.push([module.i, "\n.hero[data-v-4c2584f6] {\n  min-height: 80vh;\n  background-image: url(\"/images/3070a1fdc6842e57a4eab565e87265a5.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n@media screen and (min-width: 769px){\n.field-label[data-v-4c2584f6] {\n    flex-grow: 0.5 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -2242,7 +2270,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hero[data-v-16b5d2a0] {\n  min-height: 70vh;\n  background-image: url(\"/images/canmore.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n.subtitle[data-v-16b5d2a0] {\n  margin-top: 2rem;\n}\nimg[data-v-16b5d2a0]{\n    display:inline-block;\n    max-height:20px;\n}\n", ""]);
+exports.push([module.i, "\n.hero[data-v-16b5d2a0] {\n  min-height: 70vh;\n  background-image: url(\"/images/canmore.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n.subtitle[data-v-16b5d2a0] {\n  margin-top: 2rem;\n}\nimg[data-v-16b5d2a0] {\n  display: inline-block;\n  max-height: 20px;\n}\n", ""]);
 
 // exports
 
@@ -2261,7 +2289,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n.navbar-item[data-v-d456e682] {\n    margin-right: 3rem;\n    margin-left: 3rem;\n    margin-top: auto;\n    margin-bottom: auto;\n    padding: 2px;\n}\n.navbar-item[data-v-d456e682]:after{\n    border-bottom: 3px solid #152982;\n    transform: scaleX(0);\n    transition: all 0.2s ease-in-out;\n}\n.navbar-item[data-v-d456e682]:hover:after{\n    transform: scaleX(1);\n}\n.navbar-start[data-v-d456e682]{\n    margin: 2px auto 2px auto !important;\n}\n", ""]);
+exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 3rem;\n    margin-left: 3rem;\n    margin-top: auto;\n    margin-bottom: auto;\n    padding: 2px;\n    border-bottom: 2px solid;\n    border-color: rgba(21, 41, 130, 0);\n    transition: border .5s ease-in-out;\n}\n.navbar-start .navbar-item[data-v-d456e682]:hover{\n  border-color:rgba(21, 41, 130, 1);\n}\n.navbar-start .navbar-item[data-v-d456e682]:active{\n  border-color:rgba(21, 41, 130, 1);\n}\n.navbar-start[data-v-d456e682]{\n    margin: 2px auto 2px auto !important;\n}\n", ""]);
 
 // exports
 
@@ -2280,7 +2308,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.subtitle{\n    font-family: 'Rambla', sans-serif;\n    font-weight:bold;\n}\n.before-enter{\n opacity: 0 ;\n transform: translateY(100px);\n transition: all .5s .2s ease-out;\n}\n.enter{\n opacity: 1 ;\n transform: translateY(0px);\n}\n", ""]);
+exports.push([module.i, "\nhtml{\n    scroll-behavior: smooth;\n}\n.subtitle{\n    font-family: 'Rambla', sans-serif;\n    font-weight:bold;\n}\n.before-enter{\n opacity: 0 ;\n transform: translateY(70px);\n transition: all .8s .2s ease-out;\n}\n.enter{\n opacity: 1 ;\n transform: translateY(0px);\n}\n#services, #contact, #location {\n  scroll-margin-top: 100px;\n}\n", ""]);
 
 // exports
 
@@ -3631,7 +3659,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "control" }, [
                 _c("input", {
                   staticClass: "input",
-                  attrs: { type: "text", placeholder: "Your Name" }
+                  attrs: { type: "text", placeholder: "Your name" }
                 })
               ])
             ])
@@ -3645,12 +3673,20 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "field-body" }, [
             _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "control" }, [
-                _c("input", {
-                  staticClass: "input",
-                  attrs: { type: "email", placeholder: "Your Email Address" }
-                })
-              ])
+              _c(
+                "div",
+                { staticClass: "control has-icons-left has-icons-right" },
+                [
+                  _c("input", {
+                    staticClass: "input",
+                    attrs: { type: "email", placeholder: "Your email address" }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "icon is-small is-left" }, [
+                    _c("i", { staticClass: "fas fa-envelope" })
+                  ])
+                ]
+              )
             ])
           ])
         ]),
@@ -3661,12 +3697,18 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "control" }, [
-                _c("input", {
-                  staticClass: "input",
-                  attrs: { type: "text", placeholder: "Your Phone Number" }
-                })
+            _c("div", { staticClass: "field is-expanded" }, [
+              _c("div", { staticClass: "field has-addons" }, [
+                _c("p", { staticClass: "control" }, [
+                  _c("a", { staticClass: "button is-static" }, [_vm._v("+1")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "control is-expanded" }, [
+                  _c("input", {
+                    staticClass: "input",
+                    attrs: { type: "tel", placeholder: "Your phone number" }
+                  })
+                ])
               ])
             ])
           ])
@@ -3735,12 +3777,41 @@ var render = function() {
         ),
         _vm._v(" "),
         _c(
+          "svg",
+          {
+            directives: [
+              { name: "scrollanimation", rawName: "v-scrollanimation" }
+            ],
+            staticClass: "svg-inline--fa fa-map-marker-alt fa-w-12",
+            attrs: {
+              "aria-hidden": "true",
+              focusable: "false",
+              "data-prefix": "fas",
+              "data-icon": "map-marker-alt",
+              role: "img",
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 384 512"
+            }
+          },
+          [
+            _c("path", {
+              attrs: {
+                fill: "currentColor",
+                d:
+                  "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+              }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
           "h2",
           {
             directives: [
               { name: "scrollanimation", rawName: "v-scrollanimation" }
             ],
-            staticClass: "subtitle"
+            staticClass: "subtitle",
+            staticStyle: { display: "inline-block" }
           },
           [_vm._v("112 Kananaskis Way, Canmore, AB")]
         )
@@ -3819,11 +3890,11 @@ var staticRenderFns = [
         _c(
           "nav",
           {
-            staticClass: "navbar",
+            staticClass: "navbar is-fixed-top",
             attrs: { role: "navigation", "aria-label": "main navigation" }
           },
           [
-            _c("div", { staticClass: "navbar-start" }, [
+            _c("div", { staticClass: "navbar-brand" }, [
               _c(
                 "a",
                 { staticClass: "navbar-item", attrs: { href: "#home" } },
@@ -3950,11 +4021,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer" }, [
-      _c("div", { staticClass: "content" }, [
-        _c("p", [_vm._v("All rights reserved Zettel Geomatics")])
-      ])
-    ])
+    return _c(
+      "footer",
+      { staticClass: "footer", staticStyle: { "background-color": "#9D9B95" } },
+      [
+        _c("div", { staticClass: "content" }, [
+          _c("p", [_vm._v("All rights reserved Zettel Geomatics")])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -4086,14 +4161,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "hero" }, [
+    return _c("section", { staticClass: "hero", attrs: { id: "home" } }, [
       _c("div", { staticClass: "hero-body" }, [
         _c("div", { staticClass: "container has-text-centered" }, [
           _c("h1", { staticClass: "title", attrs: { id: "title" } }, [
             _vm._v("Zettel Geomatics")
           ]),
           _vm._v(" "),
-          _c("button", { staticClass: "button" }, [_vm._v("Contact")])
+          _c("button", { staticClass: "button" }, [
+            _c("a", { attrs: { href: "#contact" } }, [_vm._v("CONTACT")])
+          ])
         ])
       ])
     ])

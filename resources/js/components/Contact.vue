@@ -16,7 +16,7 @@
               <div class="field-body">
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="text" placeholder="Your Name" />
+                    <input class="input" type="text" placeholder="Your name" />
                   </div>
                 </div>
               </div>
@@ -27,20 +27,28 @@
               </div>
               <div class="field-body">
                 <div class="field">
-                  <div class="control">
-                    <input class="input" type="email" placeholder="Your Email Address" />
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="Your email address" />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="field is-horizontal">
               <div class="field-label">
-                <label class="label">Phone</label>
+                  <label class="label">Phone</label>
               </div>
               <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Your Phone Number" />
+                <div class="field is-expanded">
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a class="button is-static">+1</a>
+                    </p>
+                    <p class="control is-expanded">
+                      <input class="input" type="tel" placeholder="Your phone number" />
+                    </p>
                   </div>
                 </div>
               </div>
@@ -61,7 +69,7 @@
               </div>
             </div>
             <div class="container has-text-centered">
-                <button class="button">Contact</button>
+              <button class="button">Contact</button>
             </div>
           </div>
         </div>
@@ -82,6 +90,13 @@ export default {
   background-image: url("/images/3070a1fdc6842e57a4eab565e87265a5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 769px){
+
+.field-label {
+    flex-grow: 0.5 !important;
+}
+
 }
 </style>
 

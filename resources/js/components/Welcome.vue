@@ -1,9 +1,9 @@
-<template id="welcome">
-    <section class="hero">
+<template>
+    <section class="hero"  id="home">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 id="title" class="title">Zettel Geomatics</h1>
-                <button class="button">Contact</button>
+                <button class="button"><a href="#contact">CONTACT</a></button>
             </div>
         </div>
     </section>

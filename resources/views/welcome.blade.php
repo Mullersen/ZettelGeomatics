@@ -8,11 +8,12 @@
         <link href="css/app.css" rel="stylesheet" type="text/css">
 
     </head>
-    <body>
+    <body class="has-navbar-fixed-top">
         <div id="app">
             <Root></Root>
         </div>
         <script src="js/app.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
 
