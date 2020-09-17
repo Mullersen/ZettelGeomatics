@@ -2110,6 +2110,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   Name: "Navigation"
 });
@@ -2289,7 +2293,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 3rem;\n    margin-left: 3rem;\n    margin-top: auto;\n    margin-bottom: auto;\n    padding: 2px;\n    border-bottom: 2px solid;\n    border-color: rgba(21, 41, 130, 0);\n    transition: border .5s ease-in-out;\n}\n.navbar-start .navbar-item[data-v-d456e682]:hover{\n  border-color:rgba(21, 41, 130, 1);\n}\n.navbar-start .navbar-item[data-v-d456e682]:active{\n  border-color:rgba(21, 41, 130, 1);\n}\n.navbar-start[data-v-d456e682]{\n    margin: 2px auto 2px auto !important;\n}\n", ""]);
+exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n@media screen and (min-width: 1561px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 3rem;\n    margin-left: 3rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 1560px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 1rem;\n    margin-left: 1rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 789px){\n#hidden-logo[data-v-d456e682]{\n        display: inline;\n}\n.navbar[data-v-d456e682] {\n    padding: 0;\n}\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 2px;\n  border-bottom: 2px solid;\n  border-color: rgba(21, 41, 130, 0);\n  transition: border 0.5s ease-in-out;\n}\n.navbar-start .navbar-item[data-v-d456e682]:hover {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start .navbar-item[data-v-d456e682]:active {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start[data-v-d456e682] {\n  margin: 2px auto 2px auto !important;\n}\n", ""]);
 
 // exports
 
@@ -2308,7 +2312,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nhtml{\n    scroll-behavior: smooth;\n}\n.subtitle{\n    font-family: 'Rambla', sans-serif;\n    font-weight:bold;\n}\n.before-enter{\n opacity: 0 ;\n transform: translateY(70px);\n transition: all .8s .2s ease-out;\n}\n.enter{\n opacity: 1 ;\n transform: translateY(0px);\n}\n#services, #contact, #location {\n  scroll-margin-top: 100px;\n}\n", ""]);
+exports.push([module.i, "\nhtml{\n    scroll-behavior: smooth;\n}\n.subtitle{\n    font-family: 'Rambla', sans-serif;\n    font-weight:bold;\n}\n.before-enter{\n opacity: 0 ;\n transform: translateY(70px);\n transition: all .8s .2s ease-out;\n}\n.enter{\n opacity: 1 ;\n transform: translateY(0px);\n}\n#services, #contact, #location {\n  scroll-margin-top: 100px;\n}\n.title{\n    text-shadow: 1px 1px 2px #9D9B95;\n}\na:hover{\n    color: #9D9B95;\n}\n", ""]);
 
 // exports
 
@@ -3897,7 +3901,10 @@ var staticRenderFns = [
             _c("div", { staticClass: "navbar-brand" }, [
               _c(
                 "a",
-                { staticClass: "navbar-item", attrs: { href: "#home" } },
+                {
+                  staticClass: "navbar-item",
+                  attrs: { id: "hidden-logo", href: "#home" }
+                },
                 [_c("img", { attrs: { src: "/logo/logo-cropped.jpg" } })]
               ),
               _vm._v(" "),
@@ -3927,16 +3934,27 @@ var staticRenderFns = [
               { staticClass: "navbar-menu", attrs: { id: "navbarBasic" } },
               [
                 _c("div", { staticClass: "navbar-start" }, [
+                  _c("span", { staticClass: "navbar-menu" }, [
+                    _c(
+                      "a",
+                      { staticClass: "navbar-item", attrs: { href: "#home" } },
+                      [_c("img", { attrs: { src: "/logo/logo-cropped.jpg" } })]
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "navbar-item", attrs: { href: "#home" } },
+                    {
+                      staticClass: "navbar-item animate",
+                      attrs: { href: "#home" }
+                    },
                     [_vm._v("HOME")]
                   ),
                   _vm._v(" "),
                   _c(
                     "a",
                     {
-                      staticClass: "navbar-item",
+                      staticClass: "navbar-item animate",
                       attrs: { href: "#services" }
                     },
                     [_vm._v("OUR SERVICES")]
@@ -3944,14 +3962,17 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "navbar-item", attrs: { href: "#contact" } },
+                    {
+                      staticClass: "navbar-item animate",
+                      attrs: { href: "#contact" }
+                    },
                     [_vm._v("CONTACT")]
                   ),
                   _vm._v(" "),
                   _c(
                     "a",
                     {
-                      staticClass: "navbar-item",
+                      staticClass: "navbar-item animate",
                       attrs: { href: "#location" }
                     },
                     [_vm._v("LOCATION")]

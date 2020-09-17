@@ -28,6 +28,7 @@
                         el.addEventListener('click', () => {
 
                             // Get the target from the "data-target" attribute
+                            console.log(el.dataset.target);
                             const target = el.dataset.target;
                             const $target = document.getElementById(target);
 

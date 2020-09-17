@@ -56,4 +56,10 @@ html{
 #services, #contact, #location {
   scroll-margin-top: 100px;
 }
+.title{
+    text-shadow: 1px 1px 2px #9D9B95;
+}
+a:hover{
+    color: #9D9B95;
+}
 </style>
