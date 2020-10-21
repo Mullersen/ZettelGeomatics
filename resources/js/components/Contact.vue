@@ -9,68 +9,86 @@
       <div v-scrollanimation class="container">
         <div class="columns is-centered">
           <div class="column is-8">
-            <div class="field is-horizontal">
-              <div class="field-label">
-                <label class="label">Name</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Your name" />
+            <form class="contact-form" @submit.prevent="sendEmail">
+              <div class="field is-horizontal">
+                <div class="field-label">
+                  <label class="label">Name</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Your name"
+                        name="from_name"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label">
-                <label class="label">Email</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="Your email address" />
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-envelope"></i>
-                    </span>
+              <div class="field is-horizontal">
+                <div class="field-label">
+                  <label class="label">Email</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="Your email address"
+                        name="from_email"
+                      />
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label">
+              <div class="field is-horizontal">
+                <div class="field-label">
                   <label class="label">Phone</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-expanded">
-                  <div class="field has-addons">
-                    <p class="control">
-                      <a class="button is-static">+1</a>
-                    </p>
-                    <p class="control is-expanded">
-                      <input class="input" type="tel" placeholder="Your phone number" />
-                    </p>
+                </div>
+                <div class="field-body">
+                  <div class="field is-expanded">
+                    <div class="field has-addons">
+                      <p class="control">
+                        <a class="button is-static">+1</a>
+                      </p>
+                      <p class="control is-expanded">
+                        <input
+                          class="input"
+                          type="tel"
+                          placeholder="Your phone number"
+                          name="from_phone"
+                        />
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label">
-                <label class="label">Message</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <textarea
-                      class="textarea"
-                      placeholder="The reason you are contacting Zettel Geomatics"
-                    />
+              <div class="field is-horizontal">
+                <div class="field-label">
+                  <label class="label">Message</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control">
+                      <textarea
+                        class="textarea"
+                        placeholder="The reason you are contacting Zettel Geomatics"
+                        name="message_html"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="container has-text-centered">
-              <button class="button">Contact</button>
-            </div>
+              <div class="container has-text-centered">
+                  <input class="button" type="submit" value="Send" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -79,8 +97,20 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
+
 export default {
   Name: "Contact",
+  methods: {
+    sendEmail: (e) => {
+      emailjs.sendForm('service_dv6bjcr', 'template_fll5kba', e.target, 'user_90nNNiKm4iQ0beQCdb1Lz')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+    }
+  }
 };
 </script>
 
@@ -91,12 +121,10 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (min-width: 769px){
-
-.field-label {
+@media screen and (min-width: 769px) {
+  .field-label {
     flex-grow: 0.5 !important;
-}
-
+  }
 }
 </style>
 

@@ -97,4 +97,8 @@ img {
 .navbar-start {
   margin: 2px auto 2px auto !important;
 }
+.navbar-burger {
+    margin-top:auto;
+    margin-bottom:auto;
+}
 </style>

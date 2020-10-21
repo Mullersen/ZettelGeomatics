@@ -1908,6 +1908,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/source/index.js");
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1988,8 +1990,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  Name: "Contact"
+  Name: "Contact",
+  methods: {
+    sendEmail: function sendEmail(e) {
+      emailjs_com__WEBPACK_IMPORTED_MODULE_0___default.a.sendForm('service_dv6bjcr', 'template_fll5kba', e.target, 'user_90nNNiKm4iQ0beQCdb1Lz').then(function (result) {
+        console.log('SUCCESS!', result.status, result.text);
+      }, function (error) {
+        console.log('FAILED...', error);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2003,6 +2033,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -2237,6 +2269,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   Name: "Welcome"
 });
@@ -2255,7 +2288,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hero[data-v-4c2584f6] {\n  min-height: 80vh;\n  background-image: url(\"/images/3070a1fdc6842e57a4eab565e87265a5.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n@media screen and (min-width: 769px){\n.field-label[data-v-4c2584f6] {\n    flex-grow: 0.5 !important;\n}\n}\n", ""]);
+exports.push([module.i, "\n.hero[data-v-4c2584f6] {\n  min-height: 80vh;\n  background-image: url(\"/images/3070a1fdc6842e57a4eab565e87265a5.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n@media screen and (min-width: 769px) {\n.field-label[data-v-4c2584f6] {\n    flex-grow: 0.5 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -2293,7 +2326,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n@media screen and (min-width: 1561px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 3rem;\n    margin-left: 3rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 1560px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 1rem;\n    margin-left: 1rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 789px){\n#hidden-logo[data-v-d456e682]{\n        display: inline;\n}\n.navbar[data-v-d456e682] {\n    padding: 0;\n}\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 2px;\n  border-bottom: 2px solid;\n  border-color: rgba(21, 41, 130, 0);\n  transition: border 0.5s ease-in-out;\n}\n.navbar-start .navbar-item[data-v-d456e682]:hover {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start .navbar-item[data-v-d456e682]:active {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start[data-v-d456e682] {\n  margin: 2px auto 2px auto !important;\n}\n", ""]);
+exports.push([module.i, "\nimg[data-v-d456e682] {\n  max-height: 10vh;\n}\n@media screen and (min-width: 1561px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 3rem;\n    margin-left: 3rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 1560px) {\n.navbar[data-v-d456e682] {\n    padding: 0 20vw 0 20vw;\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n    margin-right: 1rem;\n    margin-left: 1rem;\n}\n#hidden-logo[data-v-d456e682]{\n        display: none;\n}\n}\n@media screen and (max-width: 789px){\n#hidden-logo[data-v-d456e682]{\n        display: inline;\n}\n.navbar[data-v-d456e682] {\n    padding: 0;\n}\n}\n.navbar-start .navbar-item[data-v-d456e682]:link {\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 2px;\n  border-bottom: 2px solid;\n  border-color: rgba(21, 41, 130, 0);\n  transition: border 0.5s ease-in-out;\n}\n.navbar-start .navbar-item[data-v-d456e682]:hover {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start .navbar-item[data-v-d456e682]:active {\n  border-color: rgba(21, 41, 130, 1);\n}\n.navbar-start[data-v-d456e682] {\n  margin: 2px auto 2px auto !important;\n}\n.navbar-burger[data-v-d456e682] {\n    margin-top:auto;\n    margin-bottom:auto;\n}\n", ""]);
 
 // exports
 
@@ -2331,7 +2364,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hero[data-v-30b0c6c9] {\n  min-height: 70vh;\n  background-image: url(\"/images/5h1qpwiqcz_e1dbdeb8_02af_7e3d_78e4_86796e0eb76f.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n", ""]);
+exports.push([module.i, "\n.hero[data-v-30b0c6c9] {\n  min-height: 70vh;\n  background-image: url(\"/images/5h1qpwiqcz_e1dbdeb8_02af_7e3d_78e4_86796e0eb76f.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\nbackground-position: center center;\n}\n", ""]);
 
 // exports
 
@@ -2350,7 +2383,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hero[data-v-51777872]{\n    min-height: 70vh;\n    background-image: url(\"/images/bc9641_347f4a9b418d49f1bf547e1550e244dd_mv2_d_3264_1840_s_112.jpg\");\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.container[data-v-51777872]{\n    margin-top:10vh;\n}\n#title[data-v-51777872]{\n    font-size: 3rem;\n}\n", ""]);
+exports.push([module.i, "\n.hero[data-v-51777872]{\n    min-height: 80vh;\n    background-image: url(\"/images/welcome1.jpg\");\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center center;\n}\n.container[data-v-51777872]{\n    margin-top:10vh;\n}\n#title[data-v-51777872]{\n    font-size: 3rem;\n}\n", ""]);
 
 // exports
 
@@ -2440,6 +2473,194 @@ function toComment(sourceMap) {
 
 	return '/*# ' + data + ' */';
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/emailjs-com/source/index.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailJSResponseStatus = exports.sendForm = exports.send = exports.init = void 0;
+var EmailJSResponseStatus_1 = __webpack_require__(/*! ./models/EmailJSResponseStatus */ "./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js");
+Object.defineProperty(exports, "EmailJSResponseStatus", { enumerable: true, get: function () { return EmailJSResponseStatus_1.EmailJSResponseStatus; } });
+var UI_1 = __webpack_require__(/*! ./services/ui/UI */ "./node_modules/emailjs-com/source/services/ui/UI.js");
+var _userID = null;
+var _origin = 'https://api.emailjs.com';
+function sendPost(url, data, headers) {
+    if (headers === void 0) { headers = {}; }
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function (event) {
+            var responseStatus = new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', function (event) {
+            reject(new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target));
+        });
+        xhr.open('POST', url, true);
+        for (var key in headers) {
+            xhr.setRequestHeader(key, headers[key]);
+        }
+        xhr.send(data);
+    });
+}
+function appendGoogleCaptcha(templatePrams) {
+    var element = document && document.getElementById('g-recaptcha-response');
+    if (element && element.value) {
+        templatePrams['g-recaptcha-response'] = element.value;
+    }
+    element = null;
+    return templatePrams;
+}
+function fixIdSelector(selector) {
+    if (selector[0] !== '#') {
+        return '#' + selector;
+    }
+    return selector;
+}
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+function init(userID, origin) {
+    _userID = userID;
+    _origin = origin || 'https://api.emailjs.com';
+}
+exports.init = init;
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {Object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function send(serviceID, templateID, templatePrams, userID) {
+    var params = {
+        lib_version: '2.6.3',
+        user_id: userID || _userID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: appendGoogleCaptcha(templatePrams)
+    };
+    return sendPost(_origin + '/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json'
+    });
+}
+exports.send = send;
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function sendForm(serviceID, templateID, form, userID) {
+    if (typeof form === 'string') {
+        form = document.querySelector(fixIdSelector(form));
+    }
+    if (!form || form.nodeName !== 'FORM') {
+        throw 'Expected the HTML form element or the style selector of form';
+    }
+    UI_1.UI.progressState(form);
+    var formData = new FormData(form);
+    formData.append('lib_version', '2.6.3');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', userID || _userID);
+    return sendPost(_origin + '/api/v1.0/email/send-form', formData)
+        .then(function (response) {
+        UI_1.UI.successState(form);
+        return response;
+    }, function (error) {
+        UI_1.UI.errorState(form);
+        return Promise.reject(error);
+    });
+}
+exports.sendForm = sendForm;
+exports.default = {
+    init: init,
+    send: send,
+    sendForm: sendForm
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailJSResponseStatus = void 0;
+var EmailJSResponseStatus = /** @class */ (function () {
+    function EmailJSResponseStatus(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+    return EmailJSResponseStatus;
+}());
+exports.EmailJSResponseStatus = EmailJSResponseStatus;
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/services/ui/UI.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/emailjs-com/source/services/ui/UI.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UI = void 0;
+var UI = /** @class */ (function () {
+    function UI() {
+    }
+    UI.clearAll = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.remove(this.DONE);
+        form.classList.remove(this.ERROR);
+    };
+    UI.progressState = function (form) {
+        this.clearAll(form);
+        form.classList.add(this.PROGRESS);
+    };
+    UI.successState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.DONE);
+    };
+    UI.errorState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.ERROR);
+    };
+    UI.PROGRESS = 'emailjs-sending';
+    UI.DONE = 'emailjs-success';
+    UI.ERROR = 'emailjs-error';
+    return UI;
+}());
+exports.UI = UI;
 
 
 /***/ }),
@@ -3641,7 +3862,35 @@ var render = function() {
           ],
           staticClass: "container"
         },
-        [_vm._m(0)]
+        [
+          _c("div", { staticClass: "columns is-centered" }, [
+            _c("div", { staticClass: "column is-8" }, [
+              _c(
+                "form",
+                {
+                  staticClass: "contact-form",
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.sendEmail($event)
+                    }
+                  }
+                },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4)
+                ]
+              )
+            ])
+          ])
+        ]
       )
     ])
   ])
@@ -3651,97 +3900,120 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "columns is-centered" }, [
-      _c("div", { staticClass: "column is-8" }, [
-        _c("div", { staticClass: "field is-horizontal" }, [
-          _c("div", { staticClass: "field-label" }, [
-            _c("label", { staticClass: "label" }, [_vm._v("Name")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "control" }, [
-                _c("input", {
-                  staticClass: "input",
-                  attrs: { type: "text", placeholder: "Your name" }
-                })
-              ])
-            ])
+    return _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-label" }, [
+        _c("label", { staticClass: "label" }, [_vm._v("Name")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("input", {
+              staticClass: "input",
+              attrs: {
+                type: "text",
+                placeholder: "Your name",
+                name: "from_name"
+              }
+            })
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-horizontal" }, [
-          _c("div", { staticClass: "field-label" }, [
-            _c("label", { staticClass: "label" }, [_vm._v("Email")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field" }, [
-              _c(
-                "div",
-                { staticClass: "control has-icons-left has-icons-right" },
-                [
-                  _c("input", {
-                    staticClass: "input",
-                    attrs: { type: "email", placeholder: "Your email address" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "icon is-small is-left" }, [
-                    _c("i", { staticClass: "fas fa-envelope" })
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-horizontal" }, [
-          _c("div", { staticClass: "field-label" }, [
-            _c("label", { staticClass: "label" }, [_vm._v("Phone")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field is-expanded" }, [
-              _c("div", { staticClass: "field has-addons" }, [
-                _c("p", { staticClass: "control" }, [
-                  _c("a", { staticClass: "button is-static" }, [_vm._v("+1")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "control is-expanded" }, [
-                  _c("input", {
-                    staticClass: "input",
-                    attrs: { type: "tel", placeholder: "Your phone number" }
-                  })
-                ])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field is-horizontal" }, [
-          _c("div", { staticClass: "field-label" }, [
-            _c("label", { staticClass: "label" }, [_vm._v("Message")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field-body" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "control" }, [
-                _c("textarea", {
-                  staticClass: "textarea",
-                  attrs: {
-                    placeholder:
-                      "The reason you are contacting Zettel Geomatics"
-                  }
-                })
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container has-text-centered" }, [
-          _c("button", { staticClass: "button" }, [_vm._v("Contact")])
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-label" }, [
+        _c("label", { staticClass: "label" }, [_vm._v("Email")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control has-icons-left has-icons-right" }, [
+            _c("input", {
+              staticClass: "input",
+              attrs: {
+                type: "email",
+                placeholder: "Your email address",
+                name: "from_email"
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "icon is-small is-left" }, [
+              _c("i", { staticClass: "fas fa-envelope" })
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-label" }, [
+        _c("label", { staticClass: "label" }, [_vm._v("Phone")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field is-expanded" }, [
+          _c("div", { staticClass: "field has-addons" }, [
+            _c("p", { staticClass: "control" }, [
+              _c("a", { staticClass: "button is-static" }, [_vm._v("+1")])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "control is-expanded" }, [
+              _c("input", {
+                staticClass: "input",
+                attrs: {
+                  type: "tel",
+                  placeholder: "Your phone number",
+                  name: "from_phone"
+                }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-label" }, [
+        _c("label", { staticClass: "label" }, [_vm._v("Message")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("textarea", {
+              staticClass: "textarea",
+              attrs: {
+                placeholder: "The reason you are contacting Zettel Geomatics",
+                name: "message_html"
+              }
+            })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container has-text-centered" }, [
+      _c("input", {
+        staticClass: "button",
+        attrs: { type: "submit", value: "Send" }
+      })
     ])
   }
 ]
@@ -3809,15 +4081,26 @@ var render = function() {
         ),
         _vm._v(" "),
         _c(
-          "h2",
+          "a",
           {
-            directives: [
-              { name: "scrollanimation", rawName: "v-scrollanimation" }
-            ],
-            staticClass: "subtitle",
-            staticStyle: { display: "inline-block" }
+            attrs: {
+              href: "https://goo.gl/maps/mSvQ9weB5stk82qS6",
+              target: "_blank"
+            }
           },
-          [_vm._v("112 Kananaskis Way, Canmore, AB")]
+          [
+            _c(
+              "h2",
+              {
+                directives: [
+                  { name: "scrollanimation", rawName: "v-scrollanimation" }
+                ],
+                staticClass: "subtitle",
+                staticStyle: { display: "inline-block" }
+              },
+              [_vm._v("112 Kananaskis Way, Canmore, AB")]
+            )
+          ]
         )
       ])
     ]),

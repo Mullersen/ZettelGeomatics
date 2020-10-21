@@ -39,5 +39,6 @@ export default {
   background-image: url("/images/5h1qpwiqcz_e1dbdeb8_02af_7e3d_78e4_86796e0eb76f.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+background-position: center center;
 }
 </style>
