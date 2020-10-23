@@ -77,7 +77,7 @@
                   <div class="field">
                     <div class="control">
                       <textarea
-                        class="textarea"
+                        class="textarea input"
                         placeholder="The reason you are contacting Zettel Geomatics"
                         name="message_html"
                       />
@@ -93,6 +93,15 @@
         </div>
       </div>
     </div>
+    <div class="modal modal2 is-clipped">
+      <div class="modal-background" @click="modalClose"></div>
+      <div class="modal-content">
+        <div class="box">
+          <h2 id="modaltitle" class="title">Your message was sent successfully!</h2>
+        </div>
+      </div>
+      <button @click="modalClose" class="modal-close is-large" aria-label="close"></button>
+    </div>
   </section>
 </template>
 
@@ -106,10 +115,25 @@ export default {
       emailjs.sendForm('service_dv6bjcr', 'template_fll5kba', e.target, 'user_90nNNiKm4iQ0beQCdb1Lz')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
+            var input = document.getElementsByClassName("input");
+            console.log(input);
+            for (let element of input){
+                element.value = "";
+            }
+            var modal = document.getElementsByClassName("modal2");
+            for (let element of modal){
+                element.classList.add("is-active");
+            }
         }, (error) => {
             console.log('FAILED...', error);
         });
-    }
+    },
+    modalClose: function () {
+      var modals = document.getElementsByClassName("modal");
+      for (let element of modals){
+        element.classList.remove("is-active");
+      }
+    },
   }
 };
 </script>
@@ -121,6 +145,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 @media screen and (min-width: 769px) {
   .field-label {
     flex-grow: 0.5 !important;

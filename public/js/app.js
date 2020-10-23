@@ -1910,6 +1910,21 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/source/index.js");
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2015,9 +2030,59 @@ __webpack_require__.r(__webpack_exports__);
     sendEmail: function sendEmail(e) {
       emailjs_com__WEBPACK_IMPORTED_MODULE_0___default.a.sendForm('service_dv6bjcr', 'template_fll5kba', e.target, 'user_90nNNiKm4iQ0beQCdb1Lz').then(function (result) {
         console.log('SUCCESS!', result.status, result.text);
+        var input = document.getElementsByClassName("input");
+        console.log(input);
+
+        var _iterator = _createForOfIteratorHelper(input),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var element = _step.value;
+            element.value = "";
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        var modal = document.getElementsByClassName("modal2");
+
+        var _iterator2 = _createForOfIteratorHelper(modal),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var _element = _step2.value;
+
+            _element.classList.add("is-active");
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
       }, function (error) {
         console.log('FAILED...', error);
       });
+    },
+    modalClose: function modalClose() {
+      var modals = document.getElementsByClassName("modal");
+
+      var _iterator3 = _createForOfIteratorHelper(modals),
+          _step3;
+
+      try {
+        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+          var element = _step3.value;
+          element.classList.remove("is-active");
+        }
+      } catch (err) {
+        _iterator3.e(err);
+      } finally {
+        _iterator3.f();
+      }
     }
   }
 });
@@ -3892,6 +3957,21 @@ var render = function() {
           ])
         ]
       )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "modal modal2 is-clipped" }, [
+      _c("div", {
+        staticClass: "modal-background",
+        on: { click: _vm.modalClose }
+      }),
+      _vm._v(" "),
+      _vm._m(5),
+      _vm._v(" "),
+      _c("button", {
+        staticClass: "modal-close is-large",
+        attrs: { "aria-label": "close" },
+        on: { click: _vm.modalClose }
+      })
     ])
   ])
 }
@@ -3994,7 +4074,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "field" }, [
           _c("div", { staticClass: "control" }, [
             _c("textarea", {
-              staticClass: "textarea",
+              staticClass: "textarea input",
               attrs: {
                 placeholder: "The reason you are contacting Zettel Geomatics",
                 name: "message_html"
@@ -4014,6 +4094,18 @@ var staticRenderFns = [
         staticClass: "button",
         attrs: { type: "submit", value: "Send" }
       })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-content" }, [
+      _c("div", { staticClass: "box" }, [
+        _c("h2", { staticClass: "title", attrs: { id: "modaltitle" } }, [
+          _vm._v("Your message was sent successfully!")
+        ])
+      ])
     ])
   }
 ]
