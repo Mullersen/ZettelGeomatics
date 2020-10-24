@@ -22,6 +22,7 @@
                         type="text"
                         placeholder="Your name"
                         name="from_name"
+                        required
                       />
                     </div>
                   </div>
@@ -39,6 +40,7 @@
                         type="email"
                         placeholder="Your email address"
                         name="from_email"
+                        required
                       />
                       <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
@@ -63,6 +65,7 @@
                           type="tel"
                           placeholder="Your phone number"
                           name="from_phone"
+                          required
                         />
                       </p>
                     </div>
@@ -80,6 +83,7 @@
                         class="textarea input"
                         placeholder="The reason you are contacting Zettel Geomatics"
                         name="message_html"
+                        required
                       />
                     </div>
                   </div>

@@ -3,8 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{ asset('favicon.jpg') }}">
 
         <title>Zettel Geomatics</title>
+        <meta name="description" content='Geomatics and landsurveying in Canmore'>
+        <meta name="keywords" content="landsurveyor, landsurvey, land surveyor Canmore, geomatics, Canmore, Alberta, surveying">
+        <meta name="author" content="Jeremy Zettel">
         <link href="css/app.css" rel="stylesheet" type="text/css">
 
     </head>

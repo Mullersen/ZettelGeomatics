@@ -2023,6 +2023,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   Name: "Contact",
@@ -3993,7 +3997,8 @@ var staticRenderFns = [
               attrs: {
                 type: "text",
                 placeholder: "Your name",
-                name: "from_name"
+                name: "from_name",
+                required: ""
               }
             })
           ])
@@ -4018,7 +4023,8 @@ var staticRenderFns = [
               attrs: {
                 type: "email",
                 placeholder: "Your email address",
-                name: "from_email"
+                name: "from_email",
+                required: ""
               }
             }),
             _vm._v(" "),
@@ -4052,7 +4058,8 @@ var staticRenderFns = [
                 attrs: {
                   type: "tel",
                   placeholder: "Your phone number",
-                  name: "from_phone"
+                  name: "from_phone",
+                  required: ""
                 }
               })
             ])
@@ -4077,7 +4084,8 @@ var staticRenderFns = [
               staticClass: "textarea input",
               attrs: {
                 placeholder: "The reason you are contacting Zettel Geomatics",
-                name: "message_html"
+                name: "message_html",
+                required: ""
               }
             })
           ])
@@ -4518,7 +4526,7 @@ var render = function() {
               },
               [
                 _vm._v(
-                  'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere arcu ante, ac fringilla ante efficitur sed. Integer porta pretium rhoncus. Curabitur ultricies suscipit mauris in dapibus. Curabitur sed felis nec lorem malesuada venenatis dignissim ut mauris. Mauris malesuada arcu nec odio convallis tincidunt. Nullam augue nisl, posuere et aliquet at, feugiat ut odio. Nam eu nunc porttitor est feugiat faucibus non efficitur odio. Suspendisse placerat nec magna vel tempus. Quisque interdum eros quam, luctus maximus libero finibus vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam egestas quis ipsum malesuada suscipit. Nam ac mi mollis, dapibus lectus in, dignissim nisl. Quisque congue lacus eget massa pharetra, quis cursus dui cursus. Sed posuere eu lacus non dignissim."
                 )
               ]
             )
