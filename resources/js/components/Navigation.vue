@@ -26,10 +26,10 @@
               <img src="/logo/logo-cropped.jpg" />
             </a>
             </span>
-              <a class="navbar-item animate" href="#home">HOME</a>
               <a class="navbar-item animate" href="#services">OUR SERVICES</a>
               <a class="navbar-item animate" href="#contact">CONTACT</a>
               <a class="navbar-item animate" href="#location">LOCATION</a>
+              <a class="navbar-item" href="tel:+14036781119">+1 403-678-1119</a>
           </div>
         </div>
       </nav>

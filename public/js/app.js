@@ -4329,15 +4329,6 @@ var staticRenderFns = [
                     "a",
                     {
                       staticClass: "navbar-item animate",
-                      attrs: { href: "#home" }
-                    },
-                    [_vm._v("HOME")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "navbar-item animate",
                       attrs: { href: "#services" }
                     },
                     [_vm._v("OUR SERVICES")]
@@ -4359,6 +4350,15 @@ var staticRenderFns = [
                       attrs: { href: "#location" }
                     },
                     [_vm._v("LOCATION")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "navbar-item",
+                      attrs: { href: "tel:+14036781119" }
+                    },
+                    [_vm._v("+1 403-678-1119")]
                   )
                 ])
               ]
